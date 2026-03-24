@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learners Profile Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #e5e7eb;
+    }
+
+    .paper-input,
+    .paper-textarea,
+    .paper-checkbox {
+      border-radius: 0 !important;
+    }
+
+    .paper-input,
+    .paper-textarea {
+      border-color: #94a3b8 !important;
+      background: #fff !important;
+      min-height: 42px;
+      box-shadow: none !important;
+    }
+
+    .paper-textarea {
+      min-height: 94px;
+    }
+
+    .paper-input:focus,
+    .paper-textarea:focus {
+      outline: none !important;
+      border-color: #334155 !important;
+      box-shadow: none !important;
+    }
+
+    .section-title {
+      background: #f8fafc;
+      font-weight: 700;
+    }
+
+    .cell-label {
+      font-size: 11px;
+      line-height: 1.2;
+      color: #475569;
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    .group-box {
+      border: 1px solid #94a3b8;
+      padding: 14px;
+      min-height: 100%;
+    }
+
+    .form-paper {
+      border: 1px solid #94a3b8;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    .top-title {
+      letter-spacing: 0.25em;
+    }
+
+    @media (max-width: 768px) {
+      .top-title {
+        letter-spacing: 0.12em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="min-h-screen py-8">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="form-paper overflow-hidden">
+        <div class="border-b border-slate-400 px-5 py-5">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-[1fr_160px] md:items-start">
+            <div class="flex items-center justify-center">
+              <h1 class="top-title text-center text-2xl font-bold text-slate-900 md:text-3xl">LEARNERS PROFILE FORM</h1>
+            </div>
+            <div class="mx-auto flex h-32 w-32 items-center justify-center border border-slate-400 text-sm text-slate-500 md:mx-0">
+              1x1 Picture
+            </div>
+          </div>
+        </div>
+
+        <form class="text-sm text-slate-800">
+          <section class="border-b border-slate-400">
+            <div class="section-title border-b border-slate-400 px-4 py-2 text-base">1. T2MIS Auto Generated</div>
+            <div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-12">
+              <div class="md:col-span-8">
+                <label class="mb-1 block font-semibold">1.1 Unique Learner Identifier (ULI) Number</label>
+                <input type="text" class="paper-input input input-bordered w-full" />
+              </div>
+              <div class="md:col-span-4">
+                <label class="mb-1 block font-semibold">1.2 Entry Date</label>
+                <input type="date" class="paper-input input input-bordered w-full" />
+              </div>
+            </div>
+          </section>
+
+          <section class="border-b border-slate-400">
+            <div class="section-title border-b border-slate-400 px-4 py-2 text-base">2. Learner / Manpower Profile</div>
+            <div class="space-y-4 p-4">
+              <div>
+                <label class="mb-2 block font-semibold">2.1 Name</label>
+                <div class="grid grid-cols-1 gap-3 md:grid-cols-3">
+                  <div>
+                    <input type="text" class="paper-input input input-bordered w-full" />
+                    <p class="cell-label">Last Name, Extension Name (Jr., Sr.)</p>
+                  </div>
+                  <div>
+                    <input type="text" class="paper-input input input-bordered w-full" />
+                    <p class="cell-label">First</p>
+                  </div>
+                  <div>
+                    <input type="text" class="paper-input input input-bordered w-full" />
+                    <p class="cell-label">Middle</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label class="mb-2 block font-semibold">2.2 Complete Permanent Mailing Address</label>
+                <div class="space-y-3">
+                  <div class="grid grid-cols-1 gap-3 md:grid-cols-3">
+                    <div>
+                      <textarea class="paper-textarea textarea textarea-bordered w-full"></textarea>
+                      <p class="cell-label">Number, Street</p>
+                    </div>
+                    <div>
+                      <textarea class="paper-textarea textarea textarea-bordered w-full"></textarea>
+                      <p class="cell-label">Barangay</p>
+                    </div>
+                    <div>
+                      <textarea class="paper-textarea textarea textarea-bordered w-full"></textarea>
+                      <p class="cell-label">District</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 gap-3 md:grid-cols-3">
+                    <div>
+                      <input type="text" class="paper-input input input-bordered w-full" />
+                      <p class="cell-label">City / Municipality</p>
+                    </div>
+                    <div>
+                      <input type="text" class="paper-input input input-bordered w-full" />
+                      <p class="cell-label">Province</p>
+                    </div>
+                    <div>
+                      <input type="text" class="paper-input input input-bordered w-full" />
+                      <p class="cell-label">Region</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 gap-3 md:grid-cols-3">
+                    <div>
+                      <label class="mb-1 block text-xs font-semibold">Email Address / Facebook Account</label>
+                      <input type="text" class="paper-input input input-bordered w-full" />
+                    </div>
+                    <div>
+                      <label class="mb-1 block text-xs font-semibold">Contact No.</label>
+                      <input type="text" class="paper-input input input-bordered w-full" />
+                    </div>
+                    <div>
+                      <label class="mb-1 block text-xs font-semibold">Nationality</label>
+                      <input type="text" class="paper-input input input-bordered w-full" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="border-b border-slate-400">
+            <div class="section-title border-b border-slate-400 px-4 py-2 text-base">3. Personal Information</div>
+            <div class="space-y-4 p-4">
+              <div class="grid grid-cols-1 gap-4 lg:grid-cols-12">
+                <div class="group-box lg:col-span-2">
+                  <h3 class="mb-3 font-semibold">3.1 Sex</h3>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Male</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Female</label>
+                  </div>
+                </div>
+
+                <div class="group-box lg:col-span-3">
+                  <h3 class="mb-3 font-semibold">3.2 Civil Status</h3>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Single</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Married</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Separated / Divorced / Annulled</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Widower</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Common Law / Live-in</label>
+                  </div>
+                </div>
+
+                <div class="group-box lg:col-span-7">
+                  <h3 class="mb-3 font-semibold">3.3 Employment (before the training)</h3>
+                  <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                    <div>
+                      <p class="mb-2 text-xs font-bold uppercase tracking-wide text-slate-500">Employment Status</p>
+                      <div class="space-y-2">
+                        <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Wage-Employed</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Underemployed</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Self-Employed</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Unemployed</label>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="mb-2 text-xs font-bold uppercase tracking-wide text-slate-500">Employment Type</p>
+                      <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+                        <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> None</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Regular</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Casual</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Job Order</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Probationary</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Permanent</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Contractual</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Temporary</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label class="mb-2 block font-semibold">3.4 Birthdate</label>
+                <div class="grid grid-cols-1 gap-3 md:grid-cols-4">
+                  <div>
+                    <input type="text" class="paper-input input input-bordered w-full" />
+                    <p class="cell-label">Month of Birth</p>
+                  </div>
+                  <div>
+                    <input type="text" class="paper-input input input-bordered w-full" />
+                    <p class="cell-label">Day of Birth</p>
+                  </div>
+                  <div>
+                    <input type="text" class="paper-input input input-bordered w-full" />
+                    <p class="cell-label">Year of Birth</p>
+                  </div>
+                  <div>
+                    <input type="text" class="paper-input input input-bordered w-full" />
+                    <p class="cell-label">Age</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label class="mb-2 block font-semibold">3.5 Birthplace</label>
+                <div class="grid grid-cols-1 gap-3 md:grid-cols-3">
+                  <div>
+                    <input type="text" class="paper-input input input-bordered w-full" />
+                    <p class="cell-label">City / Municipality</p>
+                  </div>
+                  <div>
+                    <input type="text" class="paper-input input input-bordered w-full" />
+                    <p class="cell-label">Province</p>
+                  </div>
+                  <div>
+                    <input type="text" class="paper-input input input-bordered w-full" />
+                    <p class="cell-label">Region</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label class="mb-2 block font-semibold">3.6 Educational Attainment Before the Training (Trainee)</label>
+                <div class="grid grid-cols-1 gap-2 md:grid-cols-3">
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> No Grade Completed</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Junior High (K-12)</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> College Undergraduate</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Elementary Undergraduate</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Senior High (K-12)</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> College Graduate</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Elementary Graduate</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Post-Secondary Non-Tertiary Technical Vocational Course Undergraduate</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Master's</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> High School Undergraduate</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Post-Secondary Non-Tertiary Technical Vocational Course Graduate</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> Doctorate</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="paper-checkbox checkbox checkbox-sm" /> High School Graduate</label>
+                </div>
+              </div>
+
+              <div>
+                <label class="mb-2 block font-semibold">3.7 Parent / Guardian</label>
+                <div class="grid grid-cols-1 gap-3 md:grid-cols-2">
+                  <div>
+                    <input type="text" class="paper-input input input-bordered w-full" />
+                    <p class="cell-label">Name</p>
+                  </div>
+                  <div>
+                    <input type="text" class="paper-input input input-bordered w-full" />
+                    <p class="cell-label">Complete Permanent Mailing Address</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="flex flex-col gap-3 border-t border-slate-400 p-4 sm:flex-row sm:justify-end">
+            <button type="reset" class="btn rounded-none border border-slate-500 bg-white text-slate-700 hover:bg-slate-100">Clear</button>
+            <button type="submit" class="btn rounded-none border border-slate-900 bg-slate-900 text-white hover:bg-slate-800">Submit Form</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
